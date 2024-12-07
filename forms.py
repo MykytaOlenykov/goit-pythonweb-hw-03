@@ -9,8 +9,8 @@ class MessageForm:
         return not bool(self.errors)
 
     def validate_fields(self):
-        self.validate_required("username")
         self.validate_min_length("username", 3)
+        self.validate_required("username")
         self.validate_min_length("message", 10)
 
     def validate_required(self, field: str):
