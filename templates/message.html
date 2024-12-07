@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+<!--  -->
+{% block content %}
+<div class="form-signin w-50 m-auto pt-3">
+  <form
+    action="/message"
+    method="POST"
+    enctype="application/x-www-form-urlencoded"
+    accept-charset="UTF-8"
+  >
+    <h1 class="h3 mb-3 fw-normal">Please send me message</h1>
+
+    <div class="row mb-3">
+      <label for="floatingInput">Your nickname</label>
+      <input
+        type="text"
+        class="form-control {% if form.errors.username %}is-invalid{% endif %}"
+        id="floatingInput"
+        name="username"
+        value="{{form.data.username}}"
+      />
+      {% if form.errors.username %}
+      <div class="invalid-feedback">{{ form.errors.username }}</div>
+      {% endif %}
+    </div>
+
+    <div class="row mb-3 h-100">
+      <label for="floatingTextarea">Message</label>
+      <textarea
+        class="form-control {% if form.errors.message %}is-invalid{% endif %}"
+        id="floatingTextarea"
+        name="message"
+      >
+{{form.data.message}}</textarea
+      >
+      {% if form.errors.message %}
+      <div class="invalid-feedback">{{ form.errors.message }}</div>
+      {% endif %}
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Send</button>
+  </form>
+</div>
+{% endblock %}

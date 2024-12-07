@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Python Core",
+    "duration": {
+      "value": 12,
+      "unit": "weeks"
+    },
+    "technologies": ["Python", "pip", "OOP", "pickle"]
+  },
+  {
+    "name": "Python Web",
+    "duration": {
+      "value": 14,
+      "unit": "weeks"
+    },
+    "technologies": [
+      "Docker, Poetry, Pipenv",
+      "SQLAlchemy, MongoDB",
+      "Django",
+      "FastAPI"
+    ]
+  },
+  {
+    "name": "Python Data Science",
+    "duration": {
+      "value": 12,
+      "unit": "weeks"
+    },
+    "technologies": [
+      "NumPy, Pandas",
+      "Matplotlib, Seaborn",
+      "TensorFlow",
+      "Keras"
+    ]
+  }
+]
