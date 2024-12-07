@@ -33,7 +33,6 @@ class HttpRequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         pr_url = urllib.parse.urlparse(self.path)
-        handler = self.routes.get((pr_url.path, "GET"))
 
         if pr_url.path.startswith("/static/"):
             self.send_static()
