@@ -7,7 +7,7 @@ from forms import MessageForm
 from repositories import messages_repository, courses_repository
 
 
-nav_menu = {"/": "Home", "/message": "Send message"}
+nav_menu = {"/": "Home", "/message": "Send message", "/read": "Messages"}
 
 
 def handle_404(request: HttpRequestHandler):
